@@ -3,7 +3,7 @@ package calculadora;
 /**
  * Calculadora de operações básicas com números inteiros.
  * @author Luiz Amaral
- * @version 1.0
+ * @version 2.0
  */
 public class Calculadora {
     /** Guarda o resultado do último cálculo válido. */
@@ -23,21 +23,40 @@ public class Calculadora {
      * @throws IllegalArgumentException se a operação for inválida ou o divisor for zero
      */
     public int calc(int a, int b, String op) {
-        if ("+".equals(op)) {
-            r = a + b;
-        } else if ("-".equals(op)) {
-            r = a - b;
-        } else if ("*".equals(op)) {
-            r = a * b;
-        } else if ("/".equals(op)) {
-            // Verifica o divisor antes de fazer a divisão.
-            if (b == 0) {
-                throw new IllegalArgumentException("Não é possível dividir por zero.");
-            }
-            r = a / b;
-        } else {
+        if (op == null) {
             throw new IllegalArgumentException("Operação inválida. Use +, -, * ou /.");
         }
+        // O switch organiza a escolha da operação.
+        switch (op) {
+            case "+":
+                r = a + b;
+                break;
+            case "-":
+                r = a - b;
+                break;
+            case "*":
+                r = a * b;
+                break;
+            case "/":
+                r = dividir(a, b);
+                break;
+            default:
+                throw new IllegalArgumentException("Operação inválida. Use +, -, * ou /.");
+        }
         return r;
+    }
+
+    /**
+     * Verifica o divisor e realiza a divisão inteira.
+     * @param a número que será dividido
+     * @param b divisor
+     * @return quociente inteiro
+     * @throws IllegalArgumentException se o divisor for zero
+     */
+    private int dividir(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Não é possível dividir por zero.");
+        }
+        return a / b;
     }
 }
