@@ -1,6 +1,0 @@
-FinançApp | Calculadora
-Operações: +, -, *, /. Digite sair em qualquer etapa para encerrar.
-Primeiro número: Segundo número: Operação (+, -, *, /): Resultado: 3.5
-Primeiro número: Segundo número: Operação (+, -, *, /): Erro: Não é possível dividir por zero.
-Primeiro número: Segundo número: Operação (+, -, *, /): Resultado: 5.0
-Primeiro número: Calculadora encerrada.

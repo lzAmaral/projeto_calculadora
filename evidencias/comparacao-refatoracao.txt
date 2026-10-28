@@ -1,6 +1,0 @@
-Comparação automatizada dos relatórios Maven Surefire
-Antes: 38 testes, 0 falhas, 0 erros, 0 ignorados.
-Depois: 38 testes, 0 falhas, 0 erros, 0 ignorados.
-Mesmas classes, mesmos nomes de testes e mesmas saídas observadas nos 38 casos.
-Nenhum arquivo de teste foi alterado durante a refatoração.
-A equivalência foi verificada nos casos cobertos pela suíte.
