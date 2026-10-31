@@ -6,12 +6,8 @@ package calculadora;
  * @version 2.0
  */
 public class Calculadora {
-    /** Guarda o resultado do último cálculo válido. */
-    private int r;
-
-    /** Cria a calculadora com resultado inicial igual a zero. */
+    /** Cria a calculadora. */
     public Calculadora() {
-        r = 0;
     }
 
     /**
@@ -26,24 +22,19 @@ public class Calculadora {
         if (op == null) {
             throw new IllegalArgumentException("Operação inválida. Use +, -, * ou /.");
         }
-        // O switch organiza a escolha da operação.
+        // Cada caso retorna o resultado da operação escolhida.
         switch (op) {
             case "+":
-                r = a + b;
-                break;
+                return a + b;
             case "-":
-                r = a - b;
-                break;
+                return a - b;
             case "*":
-                r = a * b;
-                break;
+                return a * b;
             case "/":
-                r = dividir(a, b);
-                break;
+                return dividir(a, b);
             default:
                 throw new IllegalArgumentException("Operação inválida. Use +, -, * ou /.");
         }
-        return r;
     }
 
     /**
